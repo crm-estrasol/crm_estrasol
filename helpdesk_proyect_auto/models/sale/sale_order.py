@@ -22,7 +22,7 @@ class SaleOrderLine(models.Model):
                     so.proyect_avaible = 0
                 else:
                     so.proyect_avaible = 1
-                if so.remaining_hours
+                
             else:
                 so.proyect_avaible = 2
     
