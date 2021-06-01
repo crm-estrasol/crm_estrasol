@@ -8,7 +8,9 @@ class SaleOrderLine(models.Model):
         ('none', 'No aplica'),
         ('active', 'Vigente'),
         ('off', 'Vencio')],
-        copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, digits='Product Unit of Measure', default="none")
+        copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, 
+        string="Estatus proyecto",
+        digits='Product Unit of Measure', default="none")
     
     #OVERRIDE
     @api.depends('product_id.service_policy')
@@ -23,6 +25,8 @@ class SaleOrderLine(models.Model):
     
     def refresh_all_states(self):
         items = self.env['sale.order.line'].search([])
+        
+        
         for r in items.filtered(lambda move: move.product_id.type == 'service'):
                 if r.scheduled_proyect:
                             if r.scheduled_proyect > fields.Datetime.today(): 
@@ -31,8 +35,8 @@ class SaleOrderLine(models.Model):
                                 r.proyect_avaible = "active"
                 else:
                     r.proyect_avaible = "none"
-                    
-    @api.depends('qty_delivered')
+
+    #@api.depends('qty_delivered')
     def _compute_proyect_available(self):
         uom_hour = self.env.ref('uom.product_uom_hour')
         for line in self:
