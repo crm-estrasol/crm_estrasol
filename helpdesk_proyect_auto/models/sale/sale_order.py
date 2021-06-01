@@ -26,9 +26,11 @@ class SaleOrderLine(models.Model):
         for r in items.filtered(lambda move: move.product_id.type == 'service'):
                if r.scheduled_proyect:
                             if r.scheduled_proyect > fields.Datetime.today(): 
-                                r.proyect_avaible = "Vencio"
+                                r.proyect_avaible = "off"
                             else:
-                                r.proyect_avaible = "Vigente"
+                                r.proyect_avaible = "active"
+                else:
+                    r.proyect_avaible = "none"
     @api.depends('qty_delivered')
     def _compute_proyect_available(self):
         uom_hour = self.env.ref('uom.product_uom_hour')
