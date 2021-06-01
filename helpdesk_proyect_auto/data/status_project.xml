@@ -11,6 +11,7 @@
             <field name="interval_type">hours</field>
             <field name="numbercall">-1</field>
             <field name="doall" eval="False"/>
+            
         </record>
     </data>
 </odoo>
