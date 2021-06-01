@@ -4,7 +4,11 @@ from odoo.exceptions import UserError
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
     scheduled_proyect = fields.Datetime(string="Fecha limite proyecto")
-    proyect_avaible = fields.Char('Estado proyecto', copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, digits='Product Unit of Measure', default="No aplica")
+    proyect_avaible =fields.Selection([
+        ('none', 'Regular'),
+        ('active', 'Vigente'),
+        ('off', 'Vencio')],
+        copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, digits='Product Unit of Measure', default="none")
 
     #OVERRIDE
     @api.depends('product_id.service_policy')
@@ -36,28 +40,30 @@ class SaleOrderLine(models.Model):
                     #has due date
                     if line.scheduled_proyect :
                         if line.scheduled_proyect > fields.Datetime.today(): 
-                                line.proyect_avaible = "Vencio"
+                                line.proyect_avaible = "off"
                         else:
                             if line.qty_delivered >= line.product_uom_qty:
-                                line.proyect_avaible = "Vencio"
+                                line.proyect_avaible = "off"
                             else:
-                                 line.proyect_avaible = "Vigente"
+                                 line.proyect_avaible = "active"
                     #has time
                     else:
                             if line.qty_delivered >= line.product_uom_qty:
-                                line.proyect_avaible = "Vencio"
+                                line.proyect_avaible = "off"
                             else:
                 
-                                 line.proyect_avaible = "Vigente"                
+                                 line.proyect_avaible = "active"                
                 #no time but due date
                 else:
-                     if line.scheduled_proyect:
+                    if line.scheduled_proyect:
                             if line.scheduled_proyect > fields.Datetime.today(): 
-                                line.proyect_avaible = "Vencio"
+                                line.proyect_avaible = "off"
                             else:
-                                line.proyect_avaible = "Vigente"
+                                line.proyect_avaible = "active"
+                    else:
+                        line.proyect_avaible = "none"
                
-                
+            
 
 
 
