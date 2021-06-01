@@ -31,6 +31,7 @@ class SaleOrderLine(models.Model):
                                 r.proyect_avaible = "active"
                 else:
                     r.proyect_avaible = "none"
+                    
     @api.depends('qty_delivered')
     def _compute_proyect_available(self):
         uom_hour = self.env.ref('uom.product_uom_hour')
