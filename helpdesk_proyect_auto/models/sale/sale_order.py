@@ -16,6 +16,15 @@ class SaleOrderLine(models.Model):
             is_time_product = line.product_uom.category_id == uom_hour.category_id
             line.remaining_hours_available = is_ordered_timesheet and is_time_product
   
+    
+    def refresh_all_states(self):
+        for r in self:
+           if r.product_id.type == 'service':
+               if r.scheduled_proyect:
+                            if r.scheduled_proyect > fields.Datetime.today(): 
+                                r.proyect_avaible = "Vencio"
+                            else:
+                                r.proyect_avaible = "Vigente"
     @api.depends('qty_delivered')
     def _compute_proyect_available(self):
         uom_hour = self.env.ref('uom.product_uom_hour')
