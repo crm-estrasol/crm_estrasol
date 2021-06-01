@@ -18,7 +18,7 @@ class SaleOrderLine(models.Model):
   
     
     def refresh_all_states(self):
-        for r in self:
+        for r in self.filtered():
            if r.product_id.type == 'service':
                if r.scheduled_proyect:
                             if r.scheduled_proyect > fields.Datetime.today(): 
