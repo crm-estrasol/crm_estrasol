@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inhertit_crm_estrasol_project_view_tree" model="ir.ui.view">
+            <field name="name">project.inherit.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="sale_project.view_sale_project_inherit_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sale_order_id']" position="after">
+                    <field name="remaining_status_sale"/>
+                </xpath>
+                <!--
+                <xpath expr="//field[@name='partner_ref']" position="attributes">
+                    <attribute name="string">Folio de la Factura</attribute>
+                </xpath>
+                -->
+            </field>
+        </record>
+
+       
+    </data>
+</odoo>

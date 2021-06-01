@@ -23,7 +23,7 @@
 
     # always loadedd
     'data': [
-      
+        'views/project/project.xml',
        'data/status_project.xml',
         
     ],  
