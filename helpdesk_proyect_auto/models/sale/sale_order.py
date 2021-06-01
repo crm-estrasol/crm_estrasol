@@ -4,7 +4,8 @@ from odoo.exceptions import UserError
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
     scheduled_proyect = fields.Datetime(string="Fecha limite proyecto")
-    proyect_avaible = fields.Integer(compute='_compute_remaining_hours_available')
+    proyect_avaible = fields.Char('Estado proyecto', copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, digits='Product Unit of Measure', default="No aplica")
+
     #OVERRIDE
     @api.depends('product_id.service_policy')
     def _compute_remaining_hours_available(self):
@@ -15,16 +16,42 @@ class SaleOrderLine(models.Model):
             is_time_product = line.product_uom.category_id == uom_hour.category_id
             line.remaining_hours_available = is_ordered_timesheet and is_time_product
   
-    def _compute_remaining_proyect_available(self):
-        for so in self:
-            if so.scheduled_proyect:
-                if  fields.Datetime.today() > so.scheduled_proyect:
-                    so.proyect_avaible = 0
+    @api.depends('qty_delivered')
+    def _compute_proyect_available(self):
+        uom_hour = self.env.ref('uom.product_uom_hour')
+        for line in self:
+            if  line.project_id or line.task_id:
+                uom_hour = self.env.ref('uom.product_uom_hour')
+                is_time_product = line.product_uom.category_id == uom_hour.category_id
+                if is_time_product :
+                    #has due date
+                    if line.scheduled_proyect :
+                        if line.scheduled_proyect > fields.Datetime.today(): 
+                                line.proyect_avaible = "Vencio"
+                        else:
+                            if line.qty_delivered >= line.qty_ordered:
+                                line.proyect_avaible = "Vencio"
+                            else:
+                                 line.proyect_avaible = "Vigente"
+                    #has time
+                    else:
+                            if line.qty_delivered >= line.qty_ordered:
+                                line.proyect_avaible = "Vencio"
+                            else:
+                
+                                 line.proyect_avaible = "Vigente"                
+                #no time but due date
                 else:
-                    so.proyect_avaible = 1       
-            else:
-                so.proyect_avaible = 2
-    
+                     if line.scheduled_proyect:
+                            if line.scheduled_proyect > fields.Datetime.today(): 
+                                line.proyect_avaible = "Vencio"
+                            else:
+                                line.proyect_avaible = "Vigente"
+               
+                
 
+
+
+                
 
     
