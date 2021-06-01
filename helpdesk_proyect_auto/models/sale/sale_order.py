@@ -3,7 +3,8 @@ from odoo.exceptions import UserError
 
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
-
+    scheduled_proyect = fields.Datetime(string="Fecha limite proyecto")
+    proyect_avaible = fields.Integer(compute='_compute_remaining_hours_available')
     #OVERRIDE
     @api.depends('product_id.service_policy')
     def _compute_remaining_hours_available(self):
@@ -14,9 +15,17 @@ class SaleOrderLine(models.Model):
             is_time_product = line.product_uom.category_id == uom_hour.category_id
             line.remaining_hours_available = is_ordered_timesheet and is_time_product
   
-
-
-
+    def _compute_remaining_proyect_available(self):
+        for so in self:
+            if so.scheduled_proyect:
+                if  fields.Datetime.today() > so.scheduled_proyect:
+                    so.proyect_avaible = 0
+                else:
+                    so.proyect_avaible = 1
+                if so.remaining_hours
+            else:
+                so.proyect_avaible = 2
+    
 
 
     
