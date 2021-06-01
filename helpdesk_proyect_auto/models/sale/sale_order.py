@@ -6,7 +6,7 @@ class SaleOrderLine(models.Model):
     scheduled_proyect = fields.Datetime(string="Fecha limite proyecto")
     proyect_avaible = fields.Integer(compute='_compute_remaining_hours_available')
     #OVERRIDE
-    @api.depends('product_id.service_policy')
+
     def _compute_remaining_hours_available(self):
         uom_hour = self.env.ref('uom.product_uom_hour')
         for line in self:
@@ -21,9 +21,7 @@ class SaleOrderLine(models.Model):
                 if  fields.Datetime.today() > so.scheduled_proyect:
                     so.proyect_avaible = 0
                 else:
-                    so.proyect_avaible = 1
-                
-                
+                    so.proyect_avaible = 1       
             else:
                 so.proyect_avaible = 2
     
