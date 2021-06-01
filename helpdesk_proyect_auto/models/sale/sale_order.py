@@ -9,7 +9,7 @@ class SaleOrderLine(models.Model):
         ('active', 'Vigente'),
         ('off', 'Vencio')],
         copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, digits='Product Unit of Measure', default="none")
-
+    
     #OVERRIDE
     @api.depends('product_id.service_policy')
     def _compute_remaining_hours_available(self):

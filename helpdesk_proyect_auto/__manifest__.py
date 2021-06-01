@@ -19,12 +19,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','web','sale','sale_timesheet'],
+    'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet'],
 
     # always loadedd
     'data': [
       
-       'data/status_project.xml',
+       'data/status_git addproject.xml',
         
     ],  
     'qweb': [
