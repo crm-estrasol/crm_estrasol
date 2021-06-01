@@ -24,7 +24,7 @@ class SaleOrderLine(models.Model):
     def refresh_all_states(self):
         items = self.env['sale.order.line'].search([])
         for r in items.filtered(lambda move: move.product_id.type == 'service'):
-               if r.scheduled_proyect:
+                if r.scheduled_proyect:
                             if r.scheduled_proyect > fields.Datetime.today(): 
                                 r.proyect_avaible = "off"
                             else:
