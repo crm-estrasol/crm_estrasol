@@ -28,7 +28,8 @@ class WebsiteTicketValidation(http.Controller):
         #if sale_order.state != 'draft':
         #    request.session['sale_order_id'] = None
         #    sale_order = request.website.sale_get_order(force_create=True)
-        return "Hola"
+        values={}
+        return request.render('website.mesa-de-ayuda', values)
 
 
         
