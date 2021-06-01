@@ -5,7 +5,7 @@ class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
     scheduled_proyect = fields.Datetime(string="Fecha limite proyecto")
     proyect_avaible =fields.Selection([
-        ('none', 'Regular'),
+        ('none', 'No aplica'),
         ('active', 'Vigente'),
         ('off', 'Vencio')],
         copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, digits='Product Unit of Measure', default="none")
