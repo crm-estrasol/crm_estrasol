@@ -21,15 +21,21 @@ from odoo.tools import ImageProcess
 import werkzeug
 
 class WebsiteTicketValidation(http.Controller):
-    @http.route(['/mesa-de-ayuda'], type='http', auth="public", website=True)
+    @http.route(['/mesa-de-ayuda'], type='http', auth="user", website=True)
     def create_icket(self, **kw):
+        id_user = request.env.user.id
+        user = request.env['res.users'].browse(id_user).partner_id
+        for t  in self.env['sale.order.line'].search( [ ('order_id.partner_id','=',user.id),('order_id.partner_id.is_company','=',True) ] ): 
+            values={}
+            return request.render('website.mesa-de-ayuda', values)
+        
+        return "NO"
         #"""This route is called when adding a product to cart (no options)."""
         #sale_order = request.website.sale_get_order(force_create=True)
         #if sale_order.state != 'draft':
         #    request.session['sale_order_id'] = None
         #    sale_order = request.website.sale_get_order(force_create=True)
-        values={}
-        return request.render('website.mesa-de-ayuda', values)
+       
 
 
         
