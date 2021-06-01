@@ -18,7 +18,8 @@ class SaleOrderLine(models.Model):
   
     
     def refresh_all_states(self):
-        for r in self.filtered(lambda move: move.product_id.type == 'service'):
+        items = self.env['sale.order.line'].search([])
+        for r in items.filtered(lambda move: move.product_id.type == 'service'):
                if r.scheduled_proyect:
                             if r.scheduled_proyect > fields.Datetime.today(): 
                                 r.proyect_avaible = "Vencio"
