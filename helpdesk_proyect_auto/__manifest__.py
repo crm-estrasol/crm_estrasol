@@ -24,7 +24,7 @@
     # always loadedd
     'data': [
       
-       'data/status_git addproject.xml',
+       'data/status_project.xml',
         
     ],  
     'qweb': [
