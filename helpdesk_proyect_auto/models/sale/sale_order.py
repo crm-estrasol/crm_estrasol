@@ -29,13 +29,13 @@ class SaleOrderLine(models.Model):
                         if line.scheduled_proyect > fields.Datetime.today(): 
                                 line.proyect_avaible = "Vencio"
                         else:
-                            if line.qty_delivered >= line.qty_ordered:
+                            if line.qty_delivered >= line.product_uom_qty:
                                 line.proyect_avaible = "Vencio"
                             else:
                                  line.proyect_avaible = "Vigente"
                     #has time
                     else:
-                            if line.qty_delivered >= line.qty_ordered:
+                            if line.qty_delivered >= line.product_uom_qty:
                                 line.proyect_avaible = "Vencio"
                             else:
                 
