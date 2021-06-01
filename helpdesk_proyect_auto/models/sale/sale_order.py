@@ -6,7 +6,7 @@ class SaleOrderLine(models.Model):
     scheduled_proyect = fields.Datetime(string="Fecha limite proyecto")
     proyect_avaible =fields.Selection([
         ('none', 'No aplica'),
-        ('active', 'Vigente'),
+        ('active', 'Disponible'),
         ('off', 'Vencio')],
         copy=False, compute='_compute_proyect_available', compute_sudo=True, store=True, 
         string="Estatus proyecto",
