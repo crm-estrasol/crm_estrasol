@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record model="ir.cron" id="refresh_pos_cache_cron">
+        <record model="ir.cron" id="refresh_sale_line_cron">
             <field name="name">Sale: Status so</field>
             <field name="model_id" ref="model_sale_order_line"/>
             <field name="state">code</field>
