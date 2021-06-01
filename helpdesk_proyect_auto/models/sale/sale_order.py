@@ -23,6 +23,7 @@ class SaleOrderLine(models.Model):
                 else:
                     so.proyect_avaible = 1
                 
+                
             else:
                 so.proyect_avaible = 2
     
