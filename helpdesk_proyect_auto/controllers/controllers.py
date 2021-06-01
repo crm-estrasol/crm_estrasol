@@ -21,7 +21,7 @@ from odoo.tools import ImageProcess
 import werkzeug
 
 class WebsiteTicketValidation(http.Controller):
-    @http.route(['/mesa-de-ayuda'], type='http', auth="public", methods=['POST'], website=True)
+    @http.route(['/mesa-de-ayuda'], type='http', auth="public", website=True)
     def create_icket(self, **kw):
         #"""This route is called when adding a product to cart (no options)."""
         #sale_order = request.website.sale_get_order(force_create=True)
