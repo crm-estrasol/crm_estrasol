@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+
+        <record model="ir.ui.view" id="helpdesk_ticket_inherit_form_estrasol">
+            <field name="name">helpdesk.ticket.inherit.form.estrasol</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='task_id']" position="after">
+                    <field name="scheduled_proyect" />
+                    <field name="remaining_status_sale" />
+                    
+                </xpath>
+                <xpath expr="//field[@name='total_hours_spent']" position="after">
+                    <field name="remaining_hours_so" />
+                    
+                </xpath>
+                    
+                
+                
+            </field>
+        </record>
+
+        
+
+    </data>
+</odoo>

@@ -26,7 +26,8 @@
     'data': [
         'views/project/project.xml',
        'data/status_project.xml',
-       'views/project/ticket_portal.xml'
+       'views/project/ticket_portal.xml',
+       'views/helpdesk/helpdesk_ticket.xml'
         
     ],  
     'qweb': [
