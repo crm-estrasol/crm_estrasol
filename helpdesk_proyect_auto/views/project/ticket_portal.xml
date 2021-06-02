@@ -70,18 +70,21 @@
                         <section class="s_website_form pt16 pb16 o_colored_level" data-vcss="001" data-snippet="s_website_form" data-name="Form" style="">
                           <div class="container">
                             <form action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/your-ticket-has-been-submitted" data-model_name="helpdesk.ticket">
-                              <div class="s_website_form_rows row s_col_no_bgcolor">
-                                <div class="form-group s_website_form_field col-12  s_website_form_required  " data-type="char" data-name="Field">
-                                  <div class="row s_col_no_resize s_col_no_bgcolor">
-                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="gm4xm180rv">
-                                      <span class="s_website_form_label_content">Tu nombre</span>
-                                      <span class="s_website_form_mark"> *</span>
-                                    </label>
-                                    <div class="col-sm">
-                                      <input type="text" class="form-control s_website_form_input" name="partner_name" required="1" placeholder="" id="gm4xm180rv"/>
+                              
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <!-- 
+                                    <div class="form-group s_website_form_field col-12  s_website_form_required  " data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="gm4xm180rv">
+                                        <span class="s_website_form_label_content">Tu nombre</span>
+                                        <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                        <input type="text" class="form-control s_website_form_input" name="partner_name" required="1" placeholder="" id="gm4xm180rv"/>
+                                        </div>
                                     </div>
-                                  </div>
-                                </div>
+                                    </div>
+                                -->
                                <!--AQUI SE COULTO-->
                                 <div class="form-group s_website_form_field col-12  s_website_form_required s_website_form_field_hidden  " data-type="char" data-name="Field">
                                   <div class="row s_col_no_resize s_col_no_bgcolor">
