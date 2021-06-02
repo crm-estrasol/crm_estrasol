@@ -3,6 +3,30 @@
     <template id="mesa_ayuda">
         <t t-name="website.mesa-de-ayuda2">
             <t t-call="website.layout">
+            <table class="table rounded mb-0 bg-white o_portal_my_doc_table">
+                <thead>
+                    <tr class="active">
+                        <th>Servicio actul</th>
+                        <th>Tiempo restante</th>                    
+                        <th class="">Vigencia</th>
+        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <t t-foreach="proys_status" t-as="item">
+                        
+                        <tr>
+                            <td><span t-esc="item[1].name"/></td>
+                            <td><span t-esc="item[0].remaining_hours_so"/></td>
+                            <td  class="text-center">
+                                <span class="badge badge-pill badge-info" title="Estado" t-esc="item[0].scheduled_proyect" />
+                            </td>
+                        
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
               <div id="wrap" class="oe_structure oe_empty">
                 <section class="s_cover bg-black-50 o_colored_level s_parallax_no_overflow_hidden pb8 pt112 oe_img_bg" data-scroll-background-ratio="0" data-snippet="s_cover" data-name="Cover" style="background-image: url(&quot;/web/image/22564-19f3c084/Copia%20de%20Sin%20t%C3%ADtulo%20%281%29.png&quot;);" data-original-id="22562" data-original-src="/web/image/22562-4d3f5a3c/Copia%20de%20Sin%20t%C3%ADtulo%20%281%29.png" data-mimetype="image/png" data-resize-width="1640" data-gl-filter="custom" data-filter-options="{&quot;filterColor&quot;:&quot;rgba(252, 159, 3, 0.44)&quot;,&quot;blend&quot;:&quot;normal&quot;,&quot;saturation&quot;:&quot;-50&quot;,&quot;brightness&quot;:&quot;-10&quot;,&quot;contrast&quot;:&quot;10&quot;}">
                   <div class="s_allow_columns container">
@@ -325,5 +349,8 @@
           
     </template>
 
+
+
     
+   
 </odoo>
