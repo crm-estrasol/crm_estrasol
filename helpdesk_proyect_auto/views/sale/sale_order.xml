@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="crm_estrasol_sale" model="ir.ui.view">
+            <field name="name">sale.order.inherith.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+
+              <xpath expr="//field[@name='product_uom_qty']" position="after">
+                <field name="scheduled_proyect" optional="show" />
+                
+
+              </xpath>
+              
+               
+            </field>
+        </record>
+
+        
+
+
+       
+    </data>
+</odoo>

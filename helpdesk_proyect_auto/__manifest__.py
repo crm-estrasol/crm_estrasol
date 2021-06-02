@@ -23,12 +23,13 @@
     'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet','project','website_helpdesk_form'],
 
     # always loadedd
-    
+
     'data': [
         'views/project/project.xml',
        'data/status_project.xml',
        'views/project/ticket_portal.xml',
-       'views/helpdesk/helpdesk_ticket.xml'
+       'views/helpdesk/helpdesk_ticket.xml',
+       'views/sale/sale_order.xml'
         
     ],  
     'qweb': [
