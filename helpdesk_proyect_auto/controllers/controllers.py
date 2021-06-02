@@ -32,10 +32,9 @@ class WebsiteTicketValidation(http.Controller):
                 if so.task_id: 
                     if  so.task_id.stage_id.is_start:
                         continue
-                    if so.task_id.stage_id.is_closed : 
+                    if  so.task_id.stage_id.is_closed : 
                         continue
                     items.append(so.task_id.project_id)
-
                 items_p = request.env['project.task'].sudo().search([ ('project_id','=', so.project_id.id)  ])
                 if items_p:
                     looked = items_p.filtered( lambda x:  x.stage_id.is_start == False     )
