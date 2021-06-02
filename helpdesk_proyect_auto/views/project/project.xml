@@ -23,6 +23,9 @@
                 <xpath expr="//field[@name='analytic_account_id']" position="before">
                     <field name="project_stage"/>
                 </xpath>
+                <xpath expr="//span[@t-if='record.partner_id.value']" position="after">
+                    <span><t t-esc="record.project_stage.value"/></span>
+                </xpath>
                 
             </field>
         </record>
