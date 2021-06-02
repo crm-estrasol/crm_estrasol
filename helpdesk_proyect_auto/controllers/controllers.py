@@ -64,7 +64,7 @@ class WebsiteForm(WebsiteForm):
         #model
         task_id = request.params.get('task_id')
         if task_id:
-            task = request.env['project.task'].sudo().browse(task_id)
-            request.params['project_id'] = task.project_id.id
+            task = request.env['project.task'].sudo().search([('id','=',task_id)])
+            request.params['project_id'] = task[0].project_id.id
 
         return super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
