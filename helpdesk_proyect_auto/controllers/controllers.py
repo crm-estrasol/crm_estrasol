@@ -29,7 +29,7 @@ class WebsiteTicketValidation(http.Controller):
             values={}
             return request.render('website.mesa-de-ayuda', values)
         
-        return request.render('website.mesa-de-ayuda')
+        return request.render('helpdesk_proyect_auto.mesa_ayuda')
         #"""This route is called when adding a product to cart (no options)."""
         #sale_order = request.website.sale_get_order(force_create=True)
         #if sale_order.state != 'draft':
