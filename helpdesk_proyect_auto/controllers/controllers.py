@@ -23,7 +23,7 @@ import werkzeug
 
 from odoo import http
 from odoo.http import request
-from enterprise.website_helpdesk_form.controller.main import WebsiteForm
+from odoo.addons.website_form.controllers.main import WebsiteForm
 
 class WebsiteTicketValidation(http.Controller):
     @http.route(['/mesa-de-ayuda'], type='http', auth="user", website=True)
