@@ -33,7 +33,7 @@
                 <xpath expr="//field[@name='company_id']" position="after">
                     <field name="remaining_status_sale" optional="show" />
                     <field name="scheduled_proyect" optional="show" />
-                    <field name="proyect_avaible" optional="show" />
+                    
                                         
                 </xpath>
 
