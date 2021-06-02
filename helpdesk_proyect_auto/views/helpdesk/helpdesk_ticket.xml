@@ -43,7 +43,7 @@
         <record id="crm_estrasol_helpdesk_kanban" model="ir.ui.view">
             <field name="name">project.helpdesk.inherith.kanban</field>
             <field name="model">helpdesk.ticket</field>
-            <field name="inherit_id" ref="project.view_task_kanban" />
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_kanban" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='legend_done']" position="before">
                     <field name="remaining_status_sale"/>
