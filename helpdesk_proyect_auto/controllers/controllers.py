@@ -30,7 +30,7 @@ class WebsiteTicketValidation(http.Controller):
         for so  in request.env['sale.order.line'].sudo().search( [ ('order_id.partner_id','=',user.id),('order_id.partner_id.is_company','=',True) ] ): 
             if so.proyect_avaible == 'active': 
                 if so.task_id: 
-                    if not so.task_id.stage_id.is_start or not t.task_id.stage_id.is_closed:
+                    if not so.task_id.stage_id.is_start or not so.task_id.stage_id.is_closed:
                         items.append(so.task_id.project_id)
                 
                 items_p = request.env['project.task'].sudo().search([ ('project_id','=', so.project_id.id)  ])
