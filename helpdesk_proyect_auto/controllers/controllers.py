@@ -66,8 +66,9 @@ class WebsiteForm(WebsiteForm):
         task_id = request.params.get('task_id')
         if task_id:
             task = request.env['project.task'].sudo().search([('id','=',task_id)])
-            request.params['project_id'] = task[0].project_id.id
+            #request.params['project_id'] = task[0].project_id.id
             del request.params['task_id']
+            
             a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
             alternative_a = json.loads(a)    
             modify_task = request.env['helpdesk.ticket'].sudo().search(   [('id','=',int(alternative_a['id']) )  ] )
