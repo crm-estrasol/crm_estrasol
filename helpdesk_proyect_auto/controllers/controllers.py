@@ -36,7 +36,7 @@ class WebsiteTicketValidation(http.Controller):
                 if items_p:
                     looked = items_p.filtered( lambda x: not x.stage_id.is_start or not  x.stage_id.is_closed   )   
                     if looked:
-                        items.append(looked.project_id)
+                        items.append(looked)
                            
         _logger.info(items)
         return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items})
