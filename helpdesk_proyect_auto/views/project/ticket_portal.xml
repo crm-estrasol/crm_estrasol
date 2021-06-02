@@ -262,10 +262,11 @@
                                     </label>
                                     <div class="col-sm">
                                       <select class="form-control s_website_form_input" name="project_id" id="jnvribbspw">
-                                         <option value="15">S00013 - Proyecto de implementación 2</option>
-                                        <option value="8">Proyecto de implementación</option>
-                                        <option value="14">S00011 - Proyecto de implementación</option>
-                                       
+                                         <t t-foreach="item" t-as="proys_avaible">
+                                            <option  t-att-value="item.id" ><t t-esc="item.name"/></option>
+                                         </t>
+                                         
+                                         
                                       </select>
                                     </div>
                                   </div>
@@ -277,6 +278,7 @@
                                     </label>
                                     <div class="col-sm">
                                       <select class="form-control s_website_form_input" name="team_id" id="6w3s4duskg4" style="">
+                                        
                                         <option value="2">Cliente en producción</option>
                                         <option value="3">Garantias</option>
                                         <option value="5">Polizas</option>
