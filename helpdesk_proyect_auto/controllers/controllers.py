@@ -30,7 +30,7 @@ class WebsiteTicketValidation(http.Controller):
             if t.task_id: 
                 if not t.task_id.stage_id.is_start or not t.task_id.stage_id.is_closed:
                     items.append(t)
-        
+        _logger.info(items)
         return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items})
         #"""This route is called when adding a product to cart (no options)."""
         #sale_order = request.website.sale_get_order(force_create=True)
