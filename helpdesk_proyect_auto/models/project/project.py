@@ -9,7 +9,7 @@ class ProjectTask(models.Model):
             
 class ProjectTaskType(models.Model):
     _inherit = 'project.task.type'
-    is_start = fields.Boolean('Closing Stage', help="Tasks in this stage are considered as closed.")
+    is_start = fields.Boolean('Paused', help="")
 
 
                 
