@@ -20,7 +20,7 @@ from odoo.tools import ImageProcess
 import werkzeug
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-
+import json
 from odoo import http
 from odoo.http import request
 #from enterpise.y.controllers.main import WebsiteForm
@@ -68,8 +68,8 @@ class WebsiteForm(WebsiteForm):
             request.params['project_id'] = task[0].project_id.id
             del request.params['task_id']
             a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
-            _logger.info(a)
-            request.env['helpdesk.team'].sudo().search(   [('id','=',int(a['id']) )  ] ) 
+            alternative_a = json.loads(a)
+            request.env['helpdesk.team'].sudo().search(   [('id','=',int(alternative_a['id']) )  ] ) 
             return a
         a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
        
