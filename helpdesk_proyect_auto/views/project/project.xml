@@ -66,7 +66,7 @@
                     <field name="remaining_status_sale"/>
                 </xpath>
                 <xpath expr="//strong[@class='o_kanban_record_title']" position="after">
-                    <strong class="o_kanban_record_title"><field name="remaining_status_sale"/></strong>
+                    <p class="o_kanban_record_title"><field name="remaining_status_sale"/></p>
                 </xpath>
                 
             </field>
