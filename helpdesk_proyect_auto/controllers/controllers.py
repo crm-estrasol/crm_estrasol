@@ -32,12 +32,11 @@ class WebsiteTicketValidation(http.Controller):
                 if not t.task_id.stage_id.is_start or not t.task_id.stage_id.is_closed:
                     items.append(t.task_id.project_id)
                
-                items_p = request.env['project.task'].sudo().search([ ('project_id','=', t.project_id.id)  ])
-                if items_p:
-                    looked = items_p.filtered( lambda x: not x.stage_id.is_start or not  x.stage_id.is_closed   )   
-                    if looked:
-                        items.append(looked)
-                        _logger.info(items)
+            items_p = request.env['project.task'].sudo().search([ ('project_id','=', t.project_id.id)  ])
+            if items_p:
+                looked = items_p.filtered( lambda x: not x.stage_id.is_start or not  x.stage_id.is_closed   )   
+                if looked:
+                    items.append(looked)
                            
        
         return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items})
