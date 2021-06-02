@@ -11,7 +11,7 @@
                         <b>
                           <br/>
                         </b>
-                        <b>Enviar un tícket de soporte ALV</b>
+                        <b>Enviar un tícket de soporte</b>
                       </span>
                     </h1>
                     <p class="lead" style="text-align: center;">
@@ -46,6 +46,16 @@
                                     </div>
                                   </div>
                                 </div>
+                                <div class="form-group s_website_form_field col-12 s_website_form_custom   " data-type="char" data-name="Field">
+                                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="pbg72w9ymsk">
+                                      <span class="s_website_form_label_content">Custom Text</span>
+                                    </label>
+                                    <div class="col-sm">
+                                      <input type="text" class="form-control s_website_form_input" name="Custom Text" id="pbg72w9ymsk"/>
+                                    </div>
+                                  </div>
+                                </div>
                                 <div class="form-group s_website_form_field col-12  s_website_form_required  " data-type="char" data-name="Field">
                                   <div class="row s_col_no_resize s_col_no_bgcolor">
                                     <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="9oov3gc1qe5">
@@ -64,7 +74,7 @@
                                       <span class="s_website_form_mark">   *</span>
                                     </label>
                                     <div class="col-sm">
-                                      <select class="form-control s_website_form_input" name="ticket_type_id" required="1" id="yw6i6uss6i">
+                                      <select class="form-control s_website_form_input" name="ticket_type_id" required="1" id="yw6i6uss6i" style="">
                                         <option value="1">Pregunta o duda</option>
                                         <option value="2">Error o comportamiento anormal pero no me  impide continuar con mi trabajo</option>
                                         <option value="3">Error o comportamiento anormal que me impide continuar con mi trabajo</option>
@@ -242,6 +252,21 @@
                                     </label>
                                     <div class="col-sm">
                                       <input type="file" class="form-control-file s_website_form_input" name="Adjuntar archivo (Únicamente archivos de imagen)" id="0zmto6764xua"/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group s_website_form_field col-12    " data-type="many2one" data-name="Field">
+                                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="jnvribbspw">
+                                      <span class="s_website_form_label_content">Proyecto</span>
+                                    </label>
+                                    <div class="col-sm">
+                                      <select class="form-control s_website_form_input" name="project_id" id="jnvribbspw">
+                                         <option value="15">S00013 - Proyecto de implementación 2</option>
+                                        <option value="8">Proyecto de implementación</option>
+                                        <option value="14">S00011 - Proyecto de implementación</option>
+                                       
+                                      </select>
                                     </div>
                                   </div>
                                 </div>
