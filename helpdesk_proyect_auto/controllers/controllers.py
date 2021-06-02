@@ -48,11 +48,11 @@ class WebsiteTicketValidation(http.Controller):
                     looked = looked.filtered( lambda x:  x.stage_id.is_closed == False    ) 
                     if looked:
                         items_status.append([looked[0], looked[0].project_id ] )
-                        items.append(looked[0].project_id)
+                        
         #items = list(set( [i for i in items] ))                     
         #items_status = list(set( [i for i in items_status] ))
         if items:
-            return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items,'proys_status':items_status,'user_email':request.env.user.email})
+            return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items,'user_email':request.env.user.email})
         else:
             return "SIN PROYECTOS ACTIVOS"
 
