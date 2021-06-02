@@ -30,15 +30,17 @@ class WebsiteTicketValidation(http.Controller):
         for t  in request.env['sale.order.line'].sudo().search( [ ('order_id.partner_id','=',user.id),('order_id.partner_id.is_company','=',True) ] ): 
             if t.task_id: 
                 if not t.task_id.stage_id.is_start or not t.task_id.stage_id.is_closed:
-                    items.append(t)
+                    items.append(t.task_id.project_id)
+               
+                items = request.env['project.task'].sudo().search([ ('project_id','=', t.project_id.id)  ])
+                if items:
+                    looked = items.filtered( lambda x: not x.stage_id.is_start or not  x.stage_id.is_closed   )   
+                    if looked:
+                        items.append(t.project_id)
+                           
         _logger.info(items)
         return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items})
-        #"""This route is called when adding a product to cart (no options)."""
-        #sale_order = request.website.sale_get_order(force_create=True)
-        #if sale_order.state != 'draft':
-        #    request.session['sale_order_id'] = None
-        #    sale_order = request.website.sale_get_order(force_create=True)
-       
+        
 
 
         
