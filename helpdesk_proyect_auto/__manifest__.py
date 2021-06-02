@@ -19,13 +19,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet','project','website_form'],
+    'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet','project'],
 
     # always loadedd
     'data': [
         'views/project/project.xml',
        'data/status_project.xml',
-       'views/project/ticket_portal.xml',
+       'views/project/ticket_portal.xml'
         
     ],  
     'qweb': [
