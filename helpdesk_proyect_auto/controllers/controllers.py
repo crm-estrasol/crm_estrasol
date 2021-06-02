@@ -44,8 +44,8 @@ class WebsiteTicketValidation(http.Controller):
                     if looked:
                         items_status.append([so,looked[0]] )
                         items.append(looked[0].project_id)
-        items = list(set( [i for i in items] ))                     
-        items_status = list(set( [i for i in items_status] ))
+        #items = list(set( [i for i in items] ))                     
+        #items_status = list(set( [i for i in items_status] ))
         if items:
             return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items,'proys_status':items_status})
         else:
