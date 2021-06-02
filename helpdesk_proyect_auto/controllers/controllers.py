@@ -77,8 +77,8 @@ class WebsiteForm(WebsiteForm):
                     search_equip = "Pólizas"        
             else:
                 search_equip = "Proyecto en proceso"
-            id_equip = request.env['helpdesk.team'].sudo().search(   [('name','=',search_equip)  ] ).id
-            modify_task.sudo().write( {'task_id':task.id,'team_id':id_equip} )         
+            id_equip = request.env['helpdesk.team'].sudo().search(   [('name','like',search_equip)  ] ).id
+            modify_task.sudo().write( {'task_id':task.id} )         
             return a
         a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
        
