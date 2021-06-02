@@ -55,7 +55,7 @@ class WebsiteTicketValidation(http.Controller):
         if items_status:
             return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_status':items_status,'user_email':request.env.user.email})
         else:
-            return "SIN PROYECTOS ACTIVOS"
+           return request.render('helpdesk_proyect_auto.mesa_ayuda_no_service')
 
 
      
