@@ -10,6 +10,7 @@
 
               <xpath expr="//tree//field[@name='product_uom_qty']" position="after">
                 <field name="scheduled_proyect" optional="show" />
+                <field name="proyect_avaible" optional="show" />
                 
 
               </xpath>
