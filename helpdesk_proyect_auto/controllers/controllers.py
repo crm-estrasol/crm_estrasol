@@ -24,7 +24,7 @@ class WebsiteTicketValidation(http.Controller):
     @http.route(['/mesa-de-ayuda'], type='http', auth="user", website=True)
     def create_icket(self, **kw):
         id_user = request.env.user.id
-        user = request.env['res.users'].browse(id_user).partner_id.parent_id.id
+        user = request.env['res.users'].browse(id_user).partner_id.parent_id
         items = []
 
         for t  in request.env['sale.order.line'].search( [ ('order_id.partner_id','=',user.id),('order_id.partner_id.is_company','=',True) ] ): 
