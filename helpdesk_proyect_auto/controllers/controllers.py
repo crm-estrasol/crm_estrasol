@@ -56,7 +56,7 @@ class WebsiteTicketValidation(http.Controller):
             return "SIN PROYECTOS ACTIVOS"
 
 
-        
+""""        
 class WebsiteForm(WebsiteForm):
 
     def _handle_website_form(self, model_name, **kwargs):
