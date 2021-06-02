@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "PackLife",
+    'name': "HELPDESK/PROYECT CONTROL",
 
     'summary': """
         New features Odoo""",

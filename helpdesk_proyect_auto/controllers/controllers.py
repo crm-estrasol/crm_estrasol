@@ -71,14 +71,22 @@ class WebsiteForm(WebsiteForm):
             a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
             alternative_a = json.loads(a)    
             modify_task = request.env['helpdesk.ticket'].sudo().search(   [('id','=',int(alternative_a['id']) )  ] )
-            search_equip =""
+            search_equip =False
             if task[0].project_id.name in ['Garantías Odoo']:
                     search_equip = "Garantías"
             elif task[0].project_id.name in ['Pólizas Odoo']:
                     search_equip = "Pólizas"        
-            else:
+        
+            elif task[0].project_id.project_stage == 'production' :
+                search_equip = "Cliente en producción"
+            elif task[0].project_id.project_stage == 'process' :
                 search_equip = "Proyecto en proceso"
+            else:
+                search_equip = "Otro"
+           
             id_equip = request.env['helpdesk.team'].sudo().search(   [('name','=',search_equip)  ] ).id
+                
+            
             modify_task.sudo().write( {'task_id':task.id,'team_id':id_equip , 'project_id':task[0].project_id.id} )         
             return a
         a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
