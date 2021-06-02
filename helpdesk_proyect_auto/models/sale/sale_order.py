@@ -3,7 +3,7 @@ from odoo.exceptions import UserError
 
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
-    scheduled_proyect = fields.Date(string="Fecha limite proyecto", default=lambda self: fields.Date.today())
+    scheduled_proyect = fields.Date(string="Fecha limite proyecto")
     proyect_avaible =fields.Selection([
         ('none', 'No aplica'),
         ('active', 'Disponible'),
