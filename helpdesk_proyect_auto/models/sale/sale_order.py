@@ -29,7 +29,7 @@ class SaleOrderLine(models.Model):
         
         for r in items.filtered(lambda move: move.product_id.type == 'service'):
                 if r.scheduled_proyect:
-                            if r.scheduled_proyect > fields.Datetime.today(): 
+                            if r.scheduled_proyect > fields.Date.today(): 
                                 r.proyect_avaible = "off"
                             else:
                                 r.proyect_avaible = "active"
@@ -46,7 +46,7 @@ class SaleOrderLine(models.Model):
                 if is_time_product :
                     #has due date
                     if line.scheduled_proyect :
-                        if line.scheduled_proyect > fields.Datetime.today(): 
+                        if line.scheduled_proyect > fields.Date.today(): 
                                 line.proyect_avaible = "off"
                         else:
                             if line.qty_delivered >= line.product_uom_qty:
@@ -63,7 +63,7 @@ class SaleOrderLine(models.Model):
                 #no time but due date
                 else:
                     if line.scheduled_proyect:
-                            if line.scheduled_proyect > fields.Datetime.today(): 
+                            if line.scheduled_proyect > fields.Date.today(): 
                                 line.proyect_avaible = "off"
                             else:
                                 line.proyect_avaible = "active"
