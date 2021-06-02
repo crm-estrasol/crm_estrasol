@@ -35,7 +35,7 @@ class WebsiteTicketValidation(http.Controller):
                 
                 items_p = request.env['project.task'].sudo().search([ ('project_id','=', so.project_id.id)  ])
                 if items_p:
-                    looked = items.filtered( lambda x:  x.stage_id.is_start == False     )
+                    looked = items_p.filtered( lambda x:  x.stage_id.is_start == False     )
                     looked = looked.filtered( lambda x:  x.stage_id.is_closed == False    ) 
                     if looked[0]:
                         items.append(looked[0].project_id)
