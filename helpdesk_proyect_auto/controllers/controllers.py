@@ -69,7 +69,7 @@ class WebsiteForm(WebsiteForm):
             del request.params['task_id']
             a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
             _logger.info(a)
-            request.env['helpdesk.team'].sudo().search( [ ('id','=',int( a['id'] )  )  ] ).sudo().write({'task_id':  int(task.id) }) 
+            request.env['helpdesk.team'].sudo().search(   [('id','=',task)  ] ) 
             return a
         a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
        
