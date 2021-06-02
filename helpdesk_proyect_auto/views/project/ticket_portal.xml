@@ -291,9 +291,9 @@
                                       <span class="s_website_form_label_content">Proyecto</span>
                                     </label>
                                     <div class="col-sm">
-                                      <select class="form-control s_website_form_input" name="project_id" id="jnvribbspw">
+                                      <select class="form-control s_website_form_input" name="task_id" id="jnvribbspw">
                                          <t t-foreach="proys_status" t-as="item">
-                                            <option  t-att-value="item[1].id" ><t t-esc="item[0].sale_line_id.display_name"/></option>
+                                            <option  t-att-value="item[0].id" ><t t-esc="item[0].sale_line_id.display_name"/></option>
                                          </t>
                                          
                                          
