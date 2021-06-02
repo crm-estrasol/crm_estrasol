@@ -18,6 +18,24 @@
                 -->
             </field>
         </record>
+        <record id="inhertit_crm_estrasol_project_type_view_tree" model="ir.ui.view">
+            <field name="name">pproject.task.type.form</field>
+            <field name="model">project.task.type</field>
+            <field name="inherit_id" ref="project.task_type_edit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='is_closed']" position="after">
+                    <field name="is_start"/>
+                    
+
+                </xpath>
+                <!--
+                <xpath expr="//field[@name='partner_ref']" position="attributes">
+                    <attribute name="string">Folio de la Factura</attribute>
+                </xpath>
+                -->
+            </field>
+        </record>
+
 
        
     </data>

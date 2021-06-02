@@ -7,7 +7,9 @@ class ProjectTask(models.Model):
     scheduled_proyect = fields.Datetime(related="sale_line_id.scheduled_proyect")
     
             
-
+class ProjectTaskType(models.Model):
+    _inherit = 'project.task.type'
+    is_start = fields.Boolean('Closing Stage', help="Tasks in this stage are considered as closed.")
 
 
                 
