@@ -37,7 +37,7 @@ class WebsiteTicketValidation(http.Controller):
                 if items_p:
                     looked = items_p.filtered( lambda x:  x.stage_id.is_start == False     )
                     looked = looked.filtered( lambda x:  x.stage_id.is_closed == False    ) 
-                    if looked[0]:
+                    if looked:
                         items.append(looked[0].project_id)
                             
        
