@@ -9,8 +9,9 @@
             <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='task_id']" position="after">
-                    <field name="scheduled_proyect" />
                     <field name="remaining_status_sale" />
+                    <field name="scheduled_proyect" />
+                    
                     
                 </xpath>
                 <xpath expr="//field[@name='total_hours_spent']" position="after">
@@ -22,7 +23,37 @@
                 
             </field>
         </record>
+         
+        <record id="custom_tree_view_helpdesk_estrasol" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.tree.estarsol</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
+            <field name="arch" type="xml">
 
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="remaining_status_sale" optional="show" />
+                    <field name="scheduled_proyect" optional="show" />
+                    <field name="remaining_hours_so" optional="show" />
+                                        
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="crm_estrasol_helpdesk_kanban" model="ir.ui.view">
+            <field name="name">project.helpdesk.inherith.kanban</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="project.view_task_kanban" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='legend_done']" position="before">
+                    <field name="remaining_status_sale"/>
+                </xpath>
+                <xpath expr="//strong" position="after">
+                    <p class=""><field name="remaining_status_sale"/></p>
+                </xpath>
+                
+            </field>
+        </record>
         
 
     </data>
