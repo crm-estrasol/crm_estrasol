@@ -67,6 +67,8 @@ class WebsiteForm(WebsiteForm):
             task = request.env['project.task'].sudo().search([('id','=',task_id)])
             request.params['project_id'] = task[0].project_id.id
             del request.params['task_id']
+            a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
+            request.env[model_name].sudo().search( [ ('id','=',a['id'])  ]).task_id = task.id
         a = super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
        
         return a 
