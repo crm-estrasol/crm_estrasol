@@ -82,6 +82,7 @@ class WebsiteForm(WebsiteForm):
                 search_equip = "Cliente en producción"
             elif task[0].project_id.project_stage == 'process' :
                 search_equip = "Proyecto en proceso"
+                
             else:
                 search_equip = "Otro"
            
