@@ -27,17 +27,18 @@ class WebsiteTicketValidation(http.Controller):
         user = request.env['res.users'].browse(id_user).partner_id.parent_id
         items = []
 
-        for t  in request.env['sale.order.line'].sudo().search( [ ('order_id.partner_id','=',user.id),('order_id.partner_id.is_company','=',True) ] ): 
-            if t.proyect_avaible == 'active': 
-                if t.task_id: 
-                    if not t.task_id.stage_id.is_start or not t.task_id.stage_id.is_closed:
-                        items.append(t.task_id.project_id)
+        for so  in request.env['sale.order.line'].sudo().search( [ ('order_id.partner_id','=',user.id),('order_id.partner_id.is_company','=',True) ] ): 
+            if so.proyect_avaible == 'active': 
+                if so.task_id: 
+                    if not so.task_id.stage_id.is_start or not t.task_id.stage_id.is_closed:
+                        items.append(so.task_id.project_id)
                 
-                items_p = request.env['project.task'].sudo().search([ ('project_id','=', t.project_id.id)  ])
+                items_p = request.env['project.task'].sudo().search([ ('project_id','=', so.project_id.id)  ])
                 if items_p:
-                    looked = items_p.filtered( lambda x: not x.stage_id.is_start or not  x.stage_id.is_closed   )   
-                    if looked:
-                        items.append(looked.project_id)
+                    looked = items.filtered( lambda x:  x.stage_id.is_start == False     )
+                    looked = looked.filtered( lambda x:  x.stage_id.is_closed == False    ) 
+                    if looked[0]:
+                        items.append(looked[0].project_id)
                             
        
         return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_avaible':items})
