@@ -30,6 +30,34 @@
             </field>
         </record>
 
+        <record id="custom_tree_view_project_task" model="ir.ui.view">
+            <field name="name">Show hours</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='project_id']" position="after">
+                    <field name="remaining_status_sale" />
+                                        
+                </xpath>
+
+            </field>
+        </record>
+        <record id="custom_tree_view_project_task_hours" model="ir.ui.view">
+            <field name="name">Show hours 2</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="hr_timesheet.view_task_tree2_inherited"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='remaining_hours']" position="after">
+                    <field name="remaining_hours_so" />
+                                        
+                </xpath>
+
+            </field>
+        </record>
+       
+
         <record id="inhertit_crm_estrasol_project_view_tree" model="ir.ui.view">
             <field name="name">project.inherit.form</field>
             <field name="model">project.task</field>
