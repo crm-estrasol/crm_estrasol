@@ -23,7 +23,7 @@ import werkzeug
 
 from odoo import http
 from odoo.http import request
-#from odoo.addons.website_form.controllers.main import WebsiteForm
+from odoo.addons.website_form.controllers.main import WebsiteForm
 
 class WebsiteTicketValidation(http.Controller):
     @http.route(['/mesa-de-ayuda'], type='http', auth="user", website=True)
@@ -56,7 +56,7 @@ class WebsiteTicketValidation(http.Controller):
             return "SIN PROYECTOS ACTIVOS"
 
 
-""""        
+     
 class WebsiteForm(WebsiteForm):
 
     def _handle_website_form(self, model_name, **kwargs):
@@ -67,4 +67,3 @@ class WebsiteForm(WebsiteForm):
             request.params['project_id'] = task.project_id.id
 
         return super(WebsiteForm, self)._handle_website_form(model_name, **kwargs)
-"""

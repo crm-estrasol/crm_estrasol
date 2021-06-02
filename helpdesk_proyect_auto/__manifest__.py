@@ -19,7 +19,8 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet','project'],
+    
+    'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet','project','website_helpdesk_form'],
 
     # always loadedd
     'data': [
