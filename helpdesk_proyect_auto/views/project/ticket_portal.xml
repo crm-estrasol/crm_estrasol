@@ -262,7 +262,7 @@
                                     </label>
                                     <div class="col-sm">
                                       <select class="form-control s_website_form_input" name="project_id" id="jnvribbspw">
-                                         <t t-foreach="item" t-as="proys_avaible">
+                                         <t t-foreach="proys_avaible" t-as="item">
                                             <option  t-att-value="item.id" ><t t-esc="item.name"/></option>
                                          </t>
                                          
