@@ -5,33 +5,7 @@
             <t t-call="website.layout">
             
             
-            <div class="container mb64">
-                <table class="table rounded mb-0 bg-white o_portal_my_doc_table">
-                    <thead>
-                        <tr class="active">
-                            <th>Servicio actul</th>
-                            <th>Tiempo restante</th>                    
-                            <th class="">Vigencia</th>
             
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <t t-foreach="proys_status" t-as="item">
-                            
-                            <tr>
-                                <td><span t-esc="item[1].name"/></td>
-                                <td><span t-esc="item[0].remaining_hours_so"/></td>
-                                <td  class="text-center">
-                                    <span class="" title="Estado" t-esc="item[0].scheduled_proyect" />
-                                </td>
-                            
-                            </tr>
-                        </t>
-                    </tbody>
-                </table>
-
-            </div>
             
 
 
@@ -57,7 +31,37 @@
                 <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_text_image" data-name="Text - Image" style="position: relative;" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/06&quot;,&quot;flip&quot;:[]}">
                   <div class="o_we_shape o_web_editor_Origins_06"/>
                   <div class="container">
+                    <div class="container mb64">
+                        <table class="table rounded mb-0 bg-white o_portal_my_doc_table">
+                            <thead>
+                                <tr class="active">
+                                    <th>Servicio actul</th>
+                                    <th>Tiempo restante</th>                    
+                                    <th class="">Vigencia</th>
+                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <t t-foreach="proys_status" t-as="item">
+                                    
+                                    <tr>
+                                        <td><span t-esc="item[1].name"/></td>
+                                        <td><span t-esc="item[0].remaining_hours_so"/></td>
+                                        <td  class="text-center">
+                                            <span class="" title="Estado" t-esc="item[0].scheduled_proyect" />
+                                        </td>
+                                    
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+        
+                    </div>     
+
+
                     <div class="row align-items-start">
+                        
                       <div class="pt16 pb16 o_colored_level col-lg-7" style="">
                         <h2> Tu información</h2>
                         <div class="s_hr text-left pb4 pt4" data-snippet="s_hr" data-name="Separator">
