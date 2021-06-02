@@ -52,7 +52,7 @@ class WebsiteTicketValidation(http.Controller):
         #items = list(set( [i for i in items] ))                     
         #items_status = list(set( [i for i in items_status] ))
         if  user:
-            return "Hola"
+             return werkzeug.utils.redirect('/web/login?error=access')
         if items_status:
             return request.render('helpdesk_proyect_auto.mesa_ayuda',{'proys_status':items_status,'user_email':request.env.user.email})
         else:
