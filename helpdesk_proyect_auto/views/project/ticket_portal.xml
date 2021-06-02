@@ -49,7 +49,7 @@
                                         <td><span t-esc="item[0].sale_line_id.display_name "/></td>
                                         <td><span t-esc="item[0].remaining_hours_so"/></td>
                                         <td  class="text-center">
-                                            <span class="" title="Estado" t-esc="item[0].scheduled_proyect" />
+                                            <span class="" title="Estado" t-field="item[0].scheduled_proyect" t-options="{'widget': 'date'}" />
                                         </td>
                                     
                                     </tr>
