@@ -20,7 +20,7 @@
 
     # any module necessary for this one to work correctly
     
-    'depends': ['base','web','sale','sale_timesheet','sale_project', 'hr_timesheet','project','website_helpdesk_form'],
+    'depends': ['base','web','sale','portal','sale_timesheet','sale_project', 'hr_timesheet','project','website_helpdesk_form'],
 
     # always loadedd
 
