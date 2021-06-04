@@ -1,13 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* portal
+# 	* helpdesk_proyect_auto
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-04 22:25+0000\n"
-"PO-Revision-Date: 2021-06-04 22:25+0000\n"
+"POT-Creation-Date: 2021-06-04 22:41+0000\n"
+"PO-Revision-Date: 2021-06-04 22:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,6 +37,23 @@ msgstr ""
 msgid "%s is not the reference of a report"
 msgstr "%sno es la referencia de un informe"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "&amp;nbsp;"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<font class=\"text-o-color-4\" style=\"font-size: 14px;\">&amp;nbsp;Ver "
+"todos&amp;nbsp;</font>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "<font style=\"\" class=\"text-o-color-3\">&amp;nbsp;Enviar&amp;nbsp;</font>"
+msgstr ""
+
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_back_in_edit_mode
 msgid "<i class=\"fa fa-arrow-right mr-1\"/>Back to edit mode"
@@ -63,6 +81,60 @@ msgstr ""
 msgid "<i class=\"fa fa-pencil\"/> Edit"
 msgstr "<i class=\"fa fa-pencil\"/>Editar"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda_no_service
+msgid ""
+"<span class=\"fa fa-warning\" data-original-title=\"\" title=\"\" aria-"
+"describedby=\"tooltip102657\"/>&amp;nbsp;No es posible levantar ticket."
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span class=\"s_website_form_label_content\">Adjuntar archivo (Únicamente "
+"archivos de imagen)</span>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span class=\"s_website_form_label_content\">Aplicación</span>\n"
+"                                      <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span class=\"s_website_form_label_content\">Asunto</span>\n"
+"                                      <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span class=\"s_website_form_label_content\">Descripción</span>\n"
+"                                      <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "<span class=\"s_website_form_label_content\">Proyecto</span>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span class=\"s_website_form_label_content\">Tipo de Ticket</span>\n"
+"                                      <span class=\"s_website_form_mark\">   *</span>"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span class=\"s_website_form_label_content\">Tu Email</span>\n"
+"                                      <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
 msgid "<span class=\"small mr-1 navbar-text\">Filter By:</span>"
@@ -77,6 +149,17 @@ msgstr "<span class=\"small mr-1 navbar-text\">Agrupar por:</span>"
 #: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
 msgid "<span class=\"small mr-1 navbar-text\">Sort By:</span>"
 msgstr "<span class=\"small mr-1 navbar-text\">Ordenar por:</span>"
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"<span style=\"font-size: 62px;\">\n"
+"                        <b>\n"
+"                          <br/>\n"
+"                        </b>\n"
+"                        <b>Enviar un tícket de soporte</b>\n"
+"                      </span>"
+msgstr ""
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_share_template
@@ -196,9 +279,9 @@ msgstr ""
 "            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
 "                <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
 "                    <div>\n"
-"                        Dear OAXAQUEÑO ${object.user_id.name or ''},<br/> <br/>\n"
+"                        Dear ${object.user_id.name or ''},<br/> <br/>\n"
 "                        You have been given access to ${object.user_id.company_id.name}'s portal.<br/>\n"
-"                        Your login account data is:\n"
+"                        Your login account data is SIGIGIGIGIGIGIGIGIGIGIIG:\n"
 "                        <ul>\n"
 "                            <li>Username: ${object.user_id.login or ''}</li>\n"
 "                            <li>Portal: <a href=\"${'portal_url' in ctx and ctx['portal_url'] or ''}\">${'portal_url' in ctx and ctx['portal_url'] or ''}</a></li>\n"
@@ -251,6 +334,7 @@ msgstr ""
 "</td></tr>\n"
 "</table>\n"
 "            "
+
 #. module: portal
 #. openerp-web
 #: code:addons/portal/static/src/js/portal_signature.js:0
@@ -262,12 +346,12 @@ msgstr "Aceptar y firmar"
 #: model:ir.model.fields,field_description:portal.field_portal_mixin__access_warning
 #: model:ir.model.fields,field_description:portal.field_portal_share__access_warning
 msgid "Access warning"
-msgstr ""
+msgstr "Alerta de acceso"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_layout
 msgid "Account Security"
-msgstr ""
+msgstr "Seguridad de la cuenta"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
@@ -279,7 +363,7 @@ msgstr "Agregar nota"
 #: code:addons/portal/static/src/xml/portal_chatter.xml:0
 #, python-format
 msgid "Add attachment"
-msgstr ""
+msgstr "Añadir adjunto"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
@@ -289,6 +373,11 @@ msgstr "Agregar contactos para compartir el documento...."
 #. module: portal
 #: model:ir.model.fields,help:portal.field_portal_share__note
 msgid "Add extra content to display in the email"
+msgstr "Agregar contenido adicional para mostrar en el correo electrónico"
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda_no_service
+msgid "Adquiere un servicio"
 msgstr ""
 
 #. module: portal
@@ -307,6 +396,26 @@ msgstr "Aplicar"
 #: code:addons/portal/static/src/xml/portal_chatter.xml:0
 #, python-format
 msgid "Avatar"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "CALIDAD"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "COMPRAS"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "CONTABILIDAD"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "CRM"
 msgstr ""
 
 #. module: portal
@@ -388,6 +497,11 @@ msgstr "Confirmar"
 msgid "Confirm Password"
 msgstr "Confirmar contraseña"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Consulta tus Tickets"
+msgstr ""
+
 #. module: portal
 #: model:ir.model,name:portal.model_res_partner
 #: model:ir.model.fields,field_description:portal.field_portal_wizard_user__partner_id
@@ -458,6 +572,11 @@ msgstr ""
 msgid "Customer Portal URL"
 msgstr "URL para portal"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "DOCUMENTOS"
+msgstr ""
+
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_share_template
 msgid "Dear"
@@ -476,7 +595,12 @@ msgstr ""
 msgid "Details"
 msgstr "Detalles"
 
-#. module: portal
+#. modules: portal, helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_project__display_name
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task__display_name
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task_type__display_name
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_sale_order_line__display_name
 #: model:ir.model.fields,field_description:portal.field_ir_http__display_name
 #: model:ir.model.fields,field_description:portal.field_ir_ui_view__display_name
 #: model:ir.model.fields,field_description:portal.field_mail_message__display_name
@@ -488,6 +612,11 @@ msgstr "Detalles"
 #: model:ir.model.fields,field_description:portal.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields.selection,name:helpdesk_proyect_auto.selection__sale_order_line__proyect_avaible__active
+msgid "Disponible"
+msgstr ""
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_home
@@ -506,7 +635,7 @@ msgstr ""
 #: code:addons/portal/static/src/js/portal_sidebar.js:0
 #, python-format
 msgid "Due today"
-msgstr ""
+msgstr "Fecha de vencimiento hoy"
 
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_wizard_user__email
@@ -526,6 +655,52 @@ msgstr "Hilo de mensajes"
 msgid "Employees Only"
 msgstr ""
 
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields.selection,name:helpdesk_proyect_auto.selection__project_project__project_stage__process
+msgid "En proceso"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"Error o comportamiento anormal pero no me  impide continuar con mi trabajo"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Error o comportamiento anormal que me impide continuar con mi trabajo"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Estado"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_helpdesk_ticket__remaining_status_sale
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_project__project_stage
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task__remaining_status_sale
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_sale_order_line__proyect_avaible
+msgid "Estatus proyecto"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "FIRMA"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Falla o desperfecto en la vista"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_helpdesk_ticket__scheduled_proyect
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task__scheduled_proyect
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_sale_order_line__scheduled_proyect
+msgid "Fecha limite proyecto"
+msgstr ""
+
 #. module: portal
 #. openerp-web
 #: code:addons/portal/static/src/js/portal.js:0
@@ -542,19 +717,29 @@ msgstr "Otorgar Acceso al Portal "
 #. module: portal
 #: model:ir.actions.act_window,name:portal.partner_wizard_action
 msgid "Grant portal access"
-msgstr ""
+msgstr "Otorgar acceso al portal "
 
 #. module: portal
 #: model:ir.model,name:portal.model_ir_http
 msgid "HTTP Routing"
-msgstr ""
+msgstr "Ruta HTTP "
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model,name:helpdesk_proyect_auto.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Ticket de Mesa de Ayuda"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_breadcrumbs
 msgid "Home"
 msgstr "Inicio"
 
-#. module: portal
+#. modules: portal, helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_project__id
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task__id
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task_type__id
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_sale_order_line__id
 #: model:ir.model.fields,field_description:portal.field_ir_http__id
 #: model:ir.model.fields,field_description:portal.field_ir_ui_view__id
 #: model:ir.model.fields,field_description:portal.field_mail_message__id
@@ -565,6 +750,11 @@ msgstr "Inicio"
 #: model:ir.model.fields,field_description:portal.field_portal_wizard_user__id
 #: model:ir.model.fields,field_description:portal.field_res_partner__id
 msgid "ID"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "INVENTARIO"
 msgstr ""
 
 #. module: portal
@@ -589,7 +779,12 @@ msgstr "Tipo de informe no válido: %s"
 msgid "Invitation Message"
 msgstr "Mensaje de invitación"
 
-#. module: portal
+#. modules: portal, helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_project____last_update
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task____last_update
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task_type____last_update
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_sale_order_line____last_update
 #: model:ir.model.fields,field_description:portal.field_ir_http____last_update
 #: model:ir.model.fields,field_description:portal.field_ir_ui_view____last_update
 #: model:ir.model.fields,field_description:portal.field_mail_message____last_update
@@ -600,7 +795,7 @@ msgstr "Mensaje de invitación"
 #: model:ir.model.fields,field_description:portal.field_portal_wizard_user____last_update
 #: model:ir.model.fields,field_description:portal.field_res_partner____last_update
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Última modificación el"
 
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_share__write_uid
@@ -637,6 +832,16 @@ msgstr "Usuario"
 #: model_terms:ir.ui.view,arch_db:portal.user_dropdown
 msgid "Logout"
 msgstr "Cerrar sesión"
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "MANUFACTURA"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "MESA DE AYUDA"
+msgstr ""
 
 #. module: portal
 #: model:ir.model,name:portal.model_mail_message
@@ -675,10 +880,26 @@ msgstr "Nueva contraseña:"
 msgid "Next"
 msgstr "Siguiente"
 
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields.selection,name:helpdesk_proyect_auto.selection__project_project__project_stage__none
+#: model:ir.model.fields.selection,name:helpdesk_proyect_auto.selection__sale_order_line__proyect_avaible__none
+msgid "No aplica"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda_no_service
+msgid "No cuentas con algún servicio activo"
+msgstr ""
+
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_share__note
 msgid "Note"
 msgstr "Nota"
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "OTRO"
+msgstr ""
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_record_sidebar
@@ -693,6 +914,26 @@ msgid "Oops! Something went wrong. Try to reload the page and log in."
 msgstr ""
 "Upps! Algo anda mal. Intente recargar la pagina e ingresar nuevamente."
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "PARTE DE HORAS"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "PLANEACIÓN"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "PROYECTO"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "PUNTO DE VENTA"
+msgstr ""
+
 #. module: portal
 #. openerp-web
 #: code:addons/portal/static/src/xml/portal_security.xml:0
@@ -703,11 +944,16 @@ msgstr ""
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
 msgid "Password Updated!"
-msgstr ""
+msgstr "¡Contraseña actualizada!"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
 msgid "Password:"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_project_task_type__is_start
+msgid "Paused"
 msgstr ""
 
 #. module: portal
@@ -747,6 +993,11 @@ msgstr "Configuración usuario portal"
 msgid "Powered by"
 msgstr "Con tecnología de"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Pregunta o duda"
+msgstr ""
+
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.pager
 msgid "Prev"
@@ -759,6 +1010,16 @@ msgstr "Anterior"
 #, python-format
 msgid "Previous"
 msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields.selection,name:helpdesk_proyect_auto.selection__project_project__project_stage__production
+msgid "Produccion"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model,name:helpdesk_proyect_auto.model_project_project
+msgid "Project"
+msgstr "Proyecto"
 
 #. module: portal
 #. openerp-web
@@ -781,6 +1042,28 @@ msgstr "ID del documento relacionado"
 #: model:ir.model.fields,field_description:portal.field_portal_share__res_model
 msgid "Related Document Model"
 msgstr "Modelo de documento relacionado"
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields,field_description:helpdesk_proyect_auto.field_helpdesk_ticket__remaining_hours_so
+msgid "Remaining Hours on SO"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "SITIO WEB"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.actions.server,name:helpdesk_proyect_auto.refresh_sale_line_cron_ir_actions_server
+#: model:ir.cron,cron_name:helpdesk_proyect_auto.refresh_sale_line_cron
+#: model:ir.cron,name:helpdesk_proyect_auto.refresh_sale_line_cron
+msgid "Sale: Status so"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model,name:helpdesk_proyect_auto.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
@@ -822,6 +1105,11 @@ msgstr ""
 #, python-format
 msgid "Send"
 msgstr "Enviar"
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Servicio actaul"
+msgstr ""
 
 #. module: portal
 #: code:addons/portal/wizard/portal_wizard.py:0
@@ -881,6 +1169,16 @@ msgstr "Provincia"
 msgid "Street"
 msgstr "Calle"
 
+#. module: helpdesk_proyect_auto
+#: model:ir.model,name:helpdesk_proyect_auto.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model,name:helpdesk_proyect_auto.model_project_task_type
+msgid "Task Stage"
+msgstr "Etapa de la tarea"
+
 #. module: portal
 #. openerp-web
 #: code:addons/portal/static/src/xml/portal_signature.xml:0
@@ -936,7 +1234,7 @@ msgstr ""
 #: code:addons/portal/controllers/portal.py:0
 #, python-format
 msgid "The new password and its confirmation must be identical."
-msgstr ""
+msgstr "La nueva contraseña y su confirmación deben ser idénticas."
 
 #. module: portal
 #: code:addons/portal/controllers/portal.py:0
@@ -944,6 +1242,8 @@ msgstr ""
 msgid ""
 "The old password you provided is incorrect, your password was not changed."
 msgstr ""
+"La antigua contraseña que se ha introducido no es correcta. Su contraseña no"
+" se ha cambiado."
 
 #. module: portal
 #. openerp-web
@@ -985,6 +1285,11 @@ msgstr ""
 "Este texto se incluye en el correo electrónico enviado a los nuevos usuarios"
 " del portal."
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Tiempo restante"
+msgstr ""
+
 #. module: portal
 #: code:addons/portal/wizard/portal_wizard.py:0
 #, python-format
@@ -1002,6 +1307,11 @@ msgstr ""
 msgid "Toggle filters"
 msgstr "Alternar filtros"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Tu información"
+msgstr ""
+
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_wizard__user_ids
 msgid "Users"
@@ -1012,6 +1322,16 @@ msgstr "Usuarios"
 msgid "VAT Number"
 msgstr "NIF"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "VENTAS"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model:ir.model.fields.selection,name:helpdesk_proyect_auto.selection__sale_order_line__proyect_avaible__off
+msgid "Vencio"
+msgstr ""
+
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
 msgid "Verify New Password:"
@@ -1021,6 +1341,11 @@ msgstr ""
 #: model:ir.model,name:portal.model_ir_ui_view
 msgid "View"
 msgstr "Ver"
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "Vigencia"
+msgstr ""
 
 #. module: portal
 #. openerp-web
@@ -1088,7 +1413,7 @@ msgstr "Usted está invitado a acceder a %s"
 #: code:addons/portal/controllers/portal.py:0
 #, python-format
 msgid "You cannot leave any password empty."
-msgstr ""
+msgstr "No puede dejar vacía ninguna contraseña"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_share_template
@@ -1126,6 +1451,11 @@ msgstr "Su contacto"
 msgid "Zip / Postal Code"
 msgstr "Código postal"
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda_no_service
+msgid "aquí."
+msgstr ""
+
 #. module: portal
 #. openerp-web
 #: code:addons/portal/static/src/xml/portal_chatter.xml:0
@@ -1159,6 +1489,16 @@ msgstr "registrado"
 msgid "odoo"
 msgstr ""
 
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "p.ej. Ingresos erróneamente planificados en oportunidades de CRM."
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "p.ej. miempresa@email.com"
+msgstr ""
+
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
 msgid "password"
@@ -1175,3 +1515,16 @@ msgstr "seleccionar..."
 #, python-format
 msgid "to post a comment."
 msgstr "escribir un comentario."
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid ""
+"¿Cuáles son los pasos para reproducir su problema? ¿Qué comportamiento "
+"observa en este momento? ¿Cuál era el comportamiento que esperaba en este "
+"caso?"
+msgstr ""
+
+#. module: helpdesk_proyect_auto
+#: model_terms:ir.ui.view,arch_db:helpdesk_proyect_auto.mesa_ayuda
+msgid "¿Tienes mas Tickets abiertos?"
+msgstr ""
