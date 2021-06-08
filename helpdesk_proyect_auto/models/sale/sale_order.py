@@ -48,6 +48,14 @@ class SaleOrderLine(models.Model):
                     if line.scheduled_proyect :
                         if line.scheduled_proyect > date.today(): 
                                 line.proyect_avaible = "active"
+                                if line.qty_delivered >= line.product_uom_qty:
+                                    line.proyect_avaible = "off"
+                                else:
+                    
+                                    line.proyect_avaible = "active" 
+
+
+
                         else:
                             
                             line.proyect_avaible = "off"
