@@ -3,5 +3,5 @@ from .sale import sale_order
 from .project import project
 
 from .helpdesk import helpdesk
-#from .account_move import account_move
+#from .mrp import mrp_routing
 #from .res_company import res_company
