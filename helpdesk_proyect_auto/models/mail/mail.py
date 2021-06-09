@@ -11,6 +11,8 @@ class MailMessageCrm(models.Model):
 
     @api.model
     def create(self, values):
+        _logger.info(values)
+        _logger.info("2222222222222222222222222222222")
         if  'res_model' in values:
             if 'helpdesk.ticket' == values['res_model']:
                 _logger.info("3333333333333333333333333")
