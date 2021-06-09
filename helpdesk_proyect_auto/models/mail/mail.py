@@ -11,6 +11,6 @@ class MailMessageCrm(models.Model):
     def create(self, values):
         if  'res_model' in values:
             if 'helpdesk.ticket' in values['res_model']:
-                values['is_internal'] = True
+                values['is_internal'] = False
         res = super(MailMessageCrm, self).create(values)
         return res
