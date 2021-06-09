@@ -13,7 +13,8 @@ class MailMessageCrm(models.Model):
     def create(self, values):
         if  'res_model' in values:
             if 'helpdesk.ticket' == values['res_model']:
-                _logger.info("#####################HALO")
+                _logger.info("3333333333333333333333333")
+                _logger.info(values['res_model'])
                 values['is_internal'] = 0
 
         res = super(MailMessageCrm, self).create(values)
