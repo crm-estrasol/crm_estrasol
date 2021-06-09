@@ -4,6 +4,8 @@ from math import ceil
 
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+import logging
+_logger = logging.getLogger(__name__)
 class MailMessageCrm(models.Model):
     _inherit = 'mail.message'
 
@@ -12,5 +14,8 @@ class MailMessageCrm(models.Model):
         if  'res_model' in values:
             if 'helpdesk.ticket' in values['res_model']:
                 values['is_internal'] = False
+
         res = super(MailMessageCrm, self).create(values)
+        _logger.info("#####################HALO")
         return res
+   
