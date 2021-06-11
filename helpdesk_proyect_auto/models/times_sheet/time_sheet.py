@@ -15,7 +15,7 @@ class AccountAnalyticLine(models.Model):
     def _timesheet_get_portal_domain(self):
         if self.env.user.has_group('base.group_portal') and self.env.user.partner_id.parent_id:
             return [
-                    ('task_id.partner_id', '=', [self.env.user.partner_id.parent_id.id] )
+                    ('task_id.partner_id', '=', self.env.user.partner_id.parent_id.id )
                 ]
         res = super(AccountAnalyticLine, self)._timesheet_get_portal_domain(self)
         
