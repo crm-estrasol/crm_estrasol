@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-
+#  mapped_time = dict([(datetime.strptime(  m['date:day'], "%d %b. %Y").date(), m['unit_amount']) for m in time_data])
 from lxml import etree
 import re
 
@@ -13,7 +13,7 @@ class AccountAnalyticLine(models.Model):
 
 
     def _timesheet_get_portal_domain(self):
-        if self.env.user.has_group('base.group_portal') and self.env.user.partner_id.parent_id:
+        if self.env.user.partner_id.parent_id:
             return [
                     ('task_id.partner_id', '=', self.env.user.partner_id.parent_id.id )
                 ]
